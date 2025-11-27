@@ -1,13 +1,22 @@
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
+// Brand logos
+import vamicolLogo from "@/assets/brands/vamicol-logo.png";
+import jubilantLogo from "@/assets/brands/jubilant-logo.png";
+import prestarLogo from "@/assets/brands/prestar-logo.png";
+import mystarLogo from "@/assets/brands/mystar-logo.png";
+import omanNailsLogo from "@/assets/brands/oman-nails-logo.png";
+import silpaulinLogo from "@/assets/brands/silpaulin-logo.png";
+
 const Brands = () => {
   const featuredBrand = {
     name: "VAMICOL",
     tagline: "Jubilant Industries",
+    logo: vamicolLogo,
     description: "Industry-leading premium adhesives and specialty coatings. VAMICOL has been at the forefront of bonding technology, delivering exceptional quality for decades across the Middle East and beyond.",
     products: [
       { name: "All Rounder", desc: "Multi-purpose adhesive for long-lasting bonds" },
@@ -31,6 +40,7 @@ const Brands = () => {
     {
       name: "Jubilant Agri & Consumer Products",
       origin: "India",
+      logo: jubilantLogo,
       description: "A leading manufacturer of industrial and consumer products, providing quality solutions across multiple sectors including adhesives, coatings, and specialty chemicals.",
       products: ["Industrial Adhesives", "Specialty Coatings", "Consumer Products"],
       highlights: ["Trusted manufacturer", "Global presence", "Quality certified"],
@@ -38,6 +48,7 @@ const Brands = () => {
     {
       name: "Prestar",
       origin: "Malaysia",
+      logo: prestarLogo,
       description: "Quality metal wheelbarrows and material handling equipment designed for durability and efficiency in construction environments.",
       products: ["Metal Wheelbarrows", "Spare Wheels", "Construction Carts"],
       highlights: ["Wider leg profile", "Boltless undercarriage", "Power coated finish"],
@@ -45,6 +56,7 @@ const Brands = () => {
     {
       name: "Mystar",
       origin: "Malaysia",
+      logo: mystarLogo,
       description: "Total logistic solutions provider offering foldable metal platform trolleys, multi-deck carts, and material handling equipment.",
       products: ["Foldable Platform Trolleys", "Multi-Deck Trolleys", "Netting Trolleys"],
       highlights: ["Heavy duty wheels", "Foldable handles", "Multiple capacities"],
@@ -52,6 +64,7 @@ const Brands = () => {
     {
       name: "Oman Nails",
       origin: "Oman",
+      logo: omanNailsLogo,
       description: "High quality steel wire nails with strict quality control. Easy hammering-in and higher pull-out value for reliable fastening.",
       products: ["Wire Nails", "Lost Head Nails", "Various Sizes"],
       highlights: ["High quality steel", "Strict QC", "Multiple packings"],
@@ -59,6 +72,7 @@ const Brands = () => {
     {
       name: "Silpaulin",
       origin: "India",
+      logo: silpaulinLogo,
       description: "Supreme quality multilayered cross-laminated UV stabilized tarpaulins and shade nets. 100% waterproof with excellent tensile strength.",
       products: ["Shade Nets", "Premium Tarpaulins", "Protective Sheets"],
       highlights: ["100% waterproof", "UV resistant", "High tensile strength"],
@@ -66,6 +80,7 @@ const Brands = () => {
     {
       name: "HPL Laminates",
       origin: "Various",
+      logo: null,
       description: "High Pressure Laminates for superior surface finishing in furniture, interior design, and architectural applications.",
       products: ["Decorative Laminates", "Compact Laminates", "Industrial Laminates"],
       highlights: ["Durable surface", "Wide design range", "Easy maintenance"],
@@ -73,6 +88,7 @@ const Brands = () => {
     {
       name: "PVC Edge Banding",
       origin: "Various",
+      logo: null,
       description: "Quality PVC edge banding solutions for furniture and cabinetry, available in a wide range of colors, textures, and finishes.",
       products: ["Solid Colors", "Woodgrain Finish", "High Gloss"],
       highlights: ["Perfect edge finish", "Multiple textures", "Durable application"],
@@ -101,6 +117,22 @@ const Brands = () => {
         </div>
       </section>
 
+      {/* Brand Logos Strip */}
+      <section className="py-12 bg-background border-b border-border">
+        <div className="container-custom">
+          <div className="text-center mb-8">
+            <p className="text-muted-foreground text-sm uppercase tracking-wider font-medium">Trusted by Industry Leaders</p>
+          </div>
+          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
+            {[vamicolLogo, jubilantLogo, prestarLogo, mystarLogo, omanNailsLogo, silpaulinLogo].map((logo, index) => (
+              <div key={index} className="h-16 md:h-20 w-auto grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+                <img src={logo} alt="Brand logo" className="h-full w-auto object-contain" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Featured Brand - VAMICOL */}
       <section className="section-padding bg-muted">
         <div className="container-custom">
@@ -112,7 +144,10 @@ const Brands = () => {
                   <span className="text-accent text-sm font-medium uppercase tracking-wider">
                     Featured Brand
                   </span>
-                  <h2 className="text-5xl md:text-6xl font-bold mt-2 mb-2">{featuredBrand.name}</h2>
+                  <div className="flex items-center gap-4 mt-4 mb-2">
+                    <img src={featuredBrand.logo} alt="VAMICOL Logo" className="h-16 w-auto" />
+                  </div>
+                  <h2 className="text-5xl md:text-6xl font-bold mb-2">{featuredBrand.name}</h2>
                   <p className="text-primary text-lg mb-6">{featuredBrand.tagline}</p>
                   <p className="text-secondary-foreground/80 mb-8 text-lg leading-relaxed">
                     {featuredBrand.description}
@@ -127,7 +162,7 @@ const Brands = () => {
                     ))}
                   </div>
                   
-                  <Link to="/products#vamicol-premium-adhesives">
+                  <Link to="/products/vamicol-adhesives">
                     <Button className="bg-primary hover:bg-teal-dark text-primary-foreground">
                       View All VAMICOL Products
                     </Button>
@@ -168,9 +203,15 @@ const Brands = () => {
                     </h3>
                     <span className="text-sm text-primary font-medium">{brand.origin}</span>
                   </div>
-                  <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center">
-                    <span className="text-2xl font-bold text-primary">{brand.name.charAt(0)}</span>
-                  </div>
+                  {brand.logo ? (
+                    <div className="w-20 h-14 flex items-center justify-center">
+                      <img src={brand.logo} alt={`${brand.name} logo`} className="max-w-full max-h-full object-contain" />
+                    </div>
+                  ) : (
+                    <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center">
+                      <span className="text-2xl font-bold text-primary">{brand.name.charAt(0)}</span>
+                    </div>
+                  )}
                 </div>
                 
                 <p className="text-muted-foreground mb-6">{brand.description}</p>
@@ -198,20 +239,20 @@ const Brands = () => {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-accent">
+      <section className="py-16 bg-primary">
         <div className="container-custom text-center">
-          <h2 className="text-3xl font-bold text-accent-foreground mb-4">
-            Become a Distribution Partner
+          <h2 className="text-3xl font-bold text-primary-foreground mb-4">
+            Interested in Our Products?
           </h2>
-          <p className="text-accent-foreground/80 mb-8 max-w-2xl mx-auto">
-            Interested in partnering with us? We're always looking to expand our network 
-            of quality distributors across the region.
+          <p className="text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
+            Contact our team for product inquiries, bulk orders, or to become a distribution partner.
           </p>
-          <Link to="/contact">
-            <Button size="lg" variant="secondary">
-              Contact Our Team
+          <a href="tel:+97165248148">
+            <Button size="lg" variant="secondary" className="gap-2">
+              <Phone className="w-5 h-5" />
+              Call Us Now
             </Button>
-          </Link>
+          </a>
         </div>
       </section>
 
