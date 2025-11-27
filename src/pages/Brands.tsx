@@ -1,5 +1,6 @@
-import { ExternalLink, CheckCircle } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -7,7 +8,7 @@ const Brands = () => {
   const featuredBrand = {
     name: "VAMICOL",
     tagline: "Jubilant Industries",
-    description: "Industry-leading adhesives, wood finishes, and specialty coatings. VAMICOL has been at the forefront of bonding technology, delivering exceptional quality for decades.",
+    description: "Industry-leading premium adhesives and specialty coatings. VAMICOL has been at the forefront of bonding technology, delivering exceptional quality for decades across the Middle East and beyond.",
     products: [
       { name: "All Rounder", desc: "Multi-purpose adhesive for long-lasting bonds" },
       { name: "Aquabond", desc: "Heatproof & waterproof adhesive solution" },
@@ -28,60 +29,53 @@ const Brands = () => {
 
   const brands = [
     {
-      name: "Don Quichotte",
-      origin: "Made in Holland",
-      description: "Premium high carbon steel blades and cutting tools. Manufactured with austempered steel for extreme flexibility and absolute safety.",
-      products: ["Steel Blades", "Cutting Tools", "Professional Equipment"],
-      highlights: ["High hardness", "Extreme flexibility", "Modern manufacturing"],
+      name: "Jubilant Agri & Consumer Products",
+      origin: "India",
+      description: "A leading manufacturer of industrial and consumer products, providing quality solutions across multiple sectors including adhesives, coatings, and specialty chemicals.",
+      products: ["Industrial Adhesives", "Specialty Coatings", "Consumer Products"],
+      highlights: ["Trusted manufacturer", "Global presence", "Quality certified"],
     },
     {
       name: "Prestar",
       origin: "Malaysia",
-      description: "Quality wheelbarrows and material handling equipment designed for durability and efficiency in construction environments.",
-      products: ["Wheelbarrows", "Spare Wheels", "Construction Carts"],
+      description: "Quality metal wheelbarrows and material handling equipment designed for durability and efficiency in construction environments.",
+      products: ["Metal Wheelbarrows", "Spare Wheels", "Construction Carts"],
       highlights: ["Wider leg profile", "Boltless undercarriage", "Power coated finish"],
     },
     {
       name: "Mystar",
       origin: "Malaysia",
-      description: "Total logistic solutions provider offering platform trolleys, multi-deck carts, and material handling equipment.",
-      products: ["Platform Trolleys", "Multi-Deck Trolleys", "Netting Trolleys"],
+      description: "Total logistic solutions provider offering foldable metal platform trolleys, multi-deck carts, and material handling equipment.",
+      products: ["Foldable Platform Trolleys", "Multi-Deck Trolleys", "Netting Trolleys"],
       highlights: ["Heavy duty wheels", "Foldable handles", "Multiple capacities"],
-    },
-    {
-      name: "Jivanjor",
-      origin: "India",
-      description: "Premium quality wood adhesives with the tagline 'Naya Yug, Naya Jod'. Specially formulated for unmatched bond strength.",
-      products: ["Wood Glue", "Contact Adhesives", "Multi-Purpose Adhesives"],
-      highlights: ["Hybrid technology", "Preservatives added", "Long shelf life"],
-    },
-    {
-      name: "Silpaulin",
-      origin: "India",
-      description: "Supreme quality multilayered cross-laminated UV stabilized tarpaulins. 100% waterproof with excellent tensile strength.",
-      products: ["Premium Tarpaulins", "Shade Nets", "Protective Sheets"],
-      highlights: ["100% waterproof", "UV resistant", "High tensile strength"],
     },
     {
       name: "Oman Nails",
       origin: "Oman",
-      description: "High quality steel wire nails with strict quality control. Easy hammering-in and higher pull-out value.",
+      description: "High quality steel wire nails with strict quality control. Easy hammering-in and higher pull-out value for reliable fastening.",
       products: ["Wire Nails", "Lost Head Nails", "Various Sizes"],
       highlights: ["High quality steel", "Strict QC", "Multiple packings"],
     },
     {
-      name: "Rex",
-      origin: "Made in UK",
-      description: "Multi-purpose filler powder ideal for repairs to plaster, plasterboard, wood, brick, stone and most building materials.",
-      products: ["Super Filler", "Crack Filler", "Repair Compounds"],
-      highlights: ["Easy to mix", "Superb adhesion", "Rock hard finish"],
+      name: "Silpaulin",
+      origin: "India",
+      description: "Supreme quality multilayered cross-laminated UV stabilized tarpaulins and shade nets. 100% waterproof with excellent tensile strength.",
+      products: ["Shade Nets", "Premium Tarpaulins", "Protective Sheets"],
+      highlights: ["100% waterproof", "UV resistant", "High tensile strength"],
     },
     {
-      name: "Jolly",
-      origin: "International",
-      description: "Quality hose clamps and fastening solutions for mechanical and construction applications.",
-      products: ["Hose Clamps", "Fasteners", "Fixing Solutions"],
-      highlights: ["Secure connections", "Multiple sizes", "Durable construction"],
+      name: "HPL Laminates",
+      origin: "Various",
+      description: "High Pressure Laminates for superior surface finishing in furniture, interior design, and architectural applications.",
+      products: ["Decorative Laminates", "Compact Laminates", "Industrial Laminates"],
+      highlights: ["Durable surface", "Wide design range", "Easy maintenance"],
+    },
+    {
+      name: "PVC Edge Banding",
+      origin: "Various",
+      description: "Quality PVC edge banding solutions for furniture and cabinetry, available in a wide range of colors, textures, and finishes.",
+      products: ["Solid Colors", "Woodgrain Finish", "High Gloss"],
+      highlights: ["Perfect edge finish", "Multiple textures", "Durable application"],
     },
   ];
 
@@ -101,7 +95,7 @@ const Brands = () => {
             </h1>
             <p className="text-lg text-primary-foreground/80">
               We partner with world-renowned manufacturers to bring you the highest 
-              quality building materials and tools. Each brand represents excellence in their field.
+              quality building materials and industrial supplies. Each brand represents excellence in their field.
             </p>
           </div>
         </div>
@@ -133,9 +127,11 @@ const Brands = () => {
                     ))}
                   </div>
                   
-                  <Button className="bg-primary hover:bg-teal-dark text-primary-foreground">
-                    View All VAMICOL Products
-                  </Button>
+                  <Link to="/products#vamicol-premium-adhesives">
+                    <Button className="bg-primary hover:bg-teal-dark text-primary-foreground">
+                      View All VAMICOL Products
+                    </Button>
+                  </Link>
                 </div>
                 
                 <div className="grid grid-cols-2 gap-4">
@@ -211,9 +207,11 @@ const Brands = () => {
             Interested in partnering with us? We're always looking to expand our network 
             of quality distributors across the region.
           </p>
-          <Button size="lg" variant="secondary">
-            Contact Our Team
-          </Button>
+          <Link to="/contact">
+            <Button size="lg" variant="secondary">
+              Contact Our Team
+            </Button>
+          </Link>
         </div>
       </section>
 
