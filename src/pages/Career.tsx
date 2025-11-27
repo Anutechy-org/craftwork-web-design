@@ -134,9 +134,27 @@ const Career = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    const emailBody = `
+Job Application - ${formData.position}
+
+Name: ${formData.name}
+Email: ${formData.email}
+Phone: ${formData.phone}
+Position Applied For: ${formData.position}
+
+Cover Letter / Message:
+${formData.message || 'Not provided'}
+
+Note: Please attach your CV to this email before sending.
+    `.trim();
+    
+    const mailtoUrl = `mailto:careers@craftworktrading.com?subject=${encodeURIComponent(`Job Application: ${formData.position}`)}&body=${encodeURIComponent(emailBody)}`;
+    window.open(mailtoUrl, '_blank');
+    
     toast({
-      title: "Application Submitted!",
-      description: "Thank you for your interest. Our HR team will review your application and contact you soon.",
+      title: "Email Client Opened",
+      description: "Please attach your CV and send the email to complete your application.",
     });
     setFormData({ name: "", email: "", phone: "", position: "", message: "" });
   };
