@@ -20,9 +20,23 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    
+    const emailBody = `
+Name: ${formData.name}
+Email: ${formData.email}
+Phone: ${formData.phone || 'Not provided'}
+Company: ${formData.company || 'Not provided'}
+
+Message:
+${formData.message}
+    `.trim();
+    
+    const mailtoUrl = `mailto:info@craftworktrading.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(emailBody)}`;
+    window.open(mailtoUrl, '_blank');
+    
     toast({
-      title: "Message Sent!",
-      description: "Thank you for contacting us. We'll get back to you within 24 hours.",
+      title: "Email Client Opened",
+      description: "Please send the email from your email client to complete your inquiry.",
     });
     setFormData({ name: "", email: "", phone: "", company: "", subject: "", message: "" });
   };
