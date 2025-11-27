@@ -127,9 +127,11 @@ const Brands = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <div className="flex items-start justify-between mb-4">
-                <div className="w-20 h-16 bg-muted rounded-xl flex items-center justify-center group-hover:bg-primary/10 transition-colors p-2">
+                <div className="w-full h-24 bg-muted rounded-xl flex items-center justify-center group-hover:bg-primary/10 transition-colors p-4">
                   <img src={brand.logo} alt={brand.name} className="max-w-full max-h-full object-contain" />
                 </div>
+              </div>
+              <div className="flex justify-end -mt-2 mb-2">
                 <ExternalLink className="w-5 h-5 text-muted-foreground opacity-0 group-hover:opacity-100 transition-opacity" />
               </div>
               <h3 className="text-xl font-bold text-secondary mb-2">{brand.name}</h3>
