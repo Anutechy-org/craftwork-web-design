@@ -183,8 +183,8 @@ const GroupCompanies = () => {
               </a>
             </div>
             
-            <div className="bg-secondary rounded-2xl p-8 text-secondary-foreground">
-              <h3 className="text-xl font-bold mb-6">Our Group Strengths</h3>
+            <div className="bg-secondary rounded-2xl p-8">
+              <h3 className="text-xl font-bold mb-6 text-white">Our Group Strengths</h3>
               <div className="space-y-4">
                 {[
                   { title: "25+ Years Experience", desc: "Combined industry expertise across all companies" },
@@ -195,8 +195,8 @@ const GroupCompanies = () => {
                   <div key={item.title} className="flex gap-4">
                     <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
                     <div>
-                      <h4 className="font-semibold">{item.title}</h4>
-                      <p className="text-sm text-secondary-foreground/70">{item.desc}</p>
+                      <h4 className="font-semibold text-white">{item.title}</h4>
+                      <p className="text-sm text-white/70">{item.desc}</p>
                     </div>
                   </div>
                 ))}
