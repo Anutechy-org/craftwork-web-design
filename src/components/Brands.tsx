@@ -4,38 +4,38 @@ const Brands = () => {
   const mainBrands = [
     {
       name: "VAMICOL",
-      description: "Premium wood adhesives and finishes",
+      description: "Premium adhesives & specialty coatings",
       tagline: "Jubilant Industries",
       featured: true,
     },
     {
-      name: "Don Quichotte",
-      description: "High-quality steel blades & tools",
-      tagline: "Made in Holland",
+      name: "Jubilant Agri & Consumer",
+      description: "Quality industrial products",
+      tagline: "Trusted Manufacturer",
       featured: false,
     },
     {
       name: "Prestar",
-      description: "Wheelbarrows & construction equipment",
+      description: "Metal wheelbarrows & equipment",
       tagline: "Malaysia",
       featured: false,
     },
     {
-      name: "Jivanjor",
-      description: "Wood adhesives & contact adhesives",
-      tagline: "Naya Yug, Naya Jod",
-      featured: false,
-    },
-    {
-      name: "Silpaulin",
-      description: "Premium tarpaulins & sheets",
-      tagline: "100% Waterproof",
+      name: "Oman Nails",
+      description: "Quality steel nails & hardware",
+      tagline: "Oman",
       featured: false,
     },
     {
       name: "Mystar",
-      description: "Logistic solutions & trolleys",
+      description: "Foldable platform trolleys",
       tagline: "Total Solutions",
+      featured: false,
+    },
+    {
+      name: "Silpaulin",
+      description: "Shade nets & tarpaulins",
+      tagline: "100% Waterproof",
       featured: false,
     },
   ];
@@ -52,7 +52,7 @@ const Brands = () => {
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             We partner with world-renowned manufacturers to bring you the highest 
-            quality building materials and tools.
+            quality building materials and industrial supplies.
           </p>
         </div>
 
@@ -67,7 +67,7 @@ const Brands = () => {
                 </span>
                 <h3 className="text-4xl md:text-5xl font-bold mt-2 mb-4">VAMICOL</h3>
                 <p className="text-secondary-foreground/80 max-w-lg mb-4">
-                  Industry-leading adhesives, wood finishes, and specialty coatings. 
+                  Industry-leading premium adhesives and specialty coatings. 
                   From All Rounder to Aquabond, VAMICOL delivers exceptional bonding 
                   solutions for every application.
                 </p>

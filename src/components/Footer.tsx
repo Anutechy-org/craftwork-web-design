@@ -13,11 +13,11 @@ const Footer = () => {
   ];
 
   const productCategories = [
-    { name: "Wood Adhesives", href: "/products#wood-adhesives" },
-    { name: "Construction Tools", href: "/products#construction-tools" },
-    { name: "Tarpaulins", href: "/products#tarpaulins-&-sheets" },
-    { name: "Hardware & Fasteners", href: "/products#hardware-&-fasteners" },
-    { name: "Wood Finishes", href: "/products#wood-finishes-&-stains" },
+    { name: "VAMICOL Adhesives", href: "/products#vamicol-premium-adhesives" },
+    { name: "Laminates (HPL)", href: "/products#laminates-(hpl)" },
+    { name: "PVC Edge Banding", href: "/products#pvc-edge-banding" },
+    { name: "Prestar Wheelbarrows", href: "/products#prestar-metal-wheelbarrows" },
+    { name: "Platform Trolleys", href: "/products#foldable-metal-platform-trolleys" },
   ];
 
   return (
@@ -28,8 +28,8 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <img src={logo} alt="Craftwork Trading" className="h-10 w-auto mb-6 brightness-0 invert" />
             <p className="text-secondary-foreground/70 text-sm mb-6 leading-relaxed">
-              Your trusted partner for premium building materials, adhesives, 
-              and construction supplies since 1998.
+              Your trusted partner for premium building materials, VAMICOL adhesives, 
+              and construction supplies in the UAE.
             </p>
             <div className="flex gap-4">
               {["facebook", "linkedin", "instagram"].map((social) => (
@@ -86,14 +86,13 @@ const Footer = () => {
               <li className="flex items-start gap-3">
                 <MapPin className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
                 <span className="text-secondary-foreground/70 text-sm">
-                  Al Khabeisi Area, Deira<br />
                   Dubai, UAE
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-primary flex-shrink-0" />
-                <a href="tel:+97142697359" className="text-secondary-foreground/70 hover:text-primary transition-colors text-sm">
-                  +971 04 269 7359
+                <a href="tel:+97165248148" className="text-secondary-foreground/70 hover:text-primary transition-colors text-sm">
+                  +971 6 524 8148
                 </a>
               </li>
               <li className="flex items-center gap-3">
@@ -117,7 +116,7 @@ const Footer = () => {
       <div className="border-t border-secondary-foreground/10">
         <div className="container-custom py-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-secondary-foreground/60 text-sm">
-            © {new Date().getFullYear()} Craftwork Trading Company. All rights reserved.
+            © {new Date().getFullYear()} Craftwork Building Materials Trading Co. LLC. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm text-secondary-foreground/60">
             <Link to="/contact" className="hover:text-primary transition-colors">Privacy Policy</Link>

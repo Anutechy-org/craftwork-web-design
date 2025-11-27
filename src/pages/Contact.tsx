@@ -35,12 +35,12 @@ const Contact = () => {
     {
       icon: MapPin,
       title: "Visit Us",
-      details: ["Al Khabeisi Area, Deira", "Dubai, UAE"],
+      details: ["Dubai, UAE"],
     },
     {
       icon: Phone,
       title: "Call Us",
-      details: ["+971 04 269 7359", "+971 04 269 8227"],
+      details: ["+971 6 524 8148"],
     },
     {
       icon: Mail,
@@ -193,7 +193,7 @@ const Contact = () => {
               {/* Map Placeholder */}
               <div className="aspect-video bg-muted rounded-xl overflow-hidden">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.5!2d55.32!3d25.27!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDE2JzEyLjAiTiA1NcKwMTknMTIuMCJF!5e0!3m2!1sen!2sae!4v1234567890"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d462118.02491053584!2d54.89782829453am125!3d25.076022829453125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43496ad9c645%3A0xbde66e5084295162!2sDubai%20-%20United%20Arab%20Emirates!5e0!3m2!1sen!2s!4v1234567890"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
@@ -239,10 +239,10 @@ const Contact = () => {
             Our team is available during business hours to answer your calls. 
             For urgent inquiries, reach us directly at our hotline.
           </p>
-          <a href="tel:+97142697359">
+          <a href="tel:+97165248148">
             <Button size="lg" variant="secondary" className="gap-2">
               <Phone className="w-5 h-5" />
-              Call Now: +971 04 269 7359
+              Call Now: +971 6 524 8148
             </Button>
           </a>
         </div>

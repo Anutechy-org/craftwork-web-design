@@ -1,49 +1,50 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 const Products = () => {
   const productCategories = [
     {
-      title: "Wood Adhesives",
-      description: "Premium bonding solutions for all woodworking needs",
-      products: ["VAMICOL All Rounder", "Jivanjor Wood Glue", "Polystic Adhesive"],
-      icon: "🪵",
-      color: "bg-amber-500/10 text-amber-600",
+      title: "VAMICOL Premium Adhesives",
+      description: "Industry-leading bonding solutions for professional applications",
+      products: ["VAMICOL All Rounder", "VAMICOL Aquabond", "VAMICOL Lamino"],
+      icon: "🧪",
+      color: "bg-primary/10 text-primary",
     },
     {
-      title: "Construction Tools",
-      description: "Professional-grade equipment for every project",
-      products: ["Don Quichotte Blades", "Tombo Shovels", "Rapid Clamps"],
-      icon: "🔧",
-      color: "bg-blue-500/10 text-blue-600",
-    },
-    {
-      title: "Tarpaulins & Sheets",
-      description: "Weather protection and coverage solutions",
-      products: ["Silpaulin Premium", "Shade Nets", "Hessian Cloth"],
-      icon: "🏗️",
-      color: "bg-green-500/10 text-green-600",
-    },
-    {
-      title: "Hardware & Fasteners",
-      description: "Quality nails, screws, and fixing solutions",
-      products: ["Oman Wire Nails", "G.I. Binding Wire", "Hose Clamps"],
-      icon: "🔩",
-      color: "bg-slate-500/10 text-slate-600",
-    },
-    {
-      title: "Wood Finishes",
-      description: "Premium stains and coatings for beautiful results",
-      products: ["VAMIWOOD Melamine", "Wood Stains", "Vamistain"],
+      title: "Laminates (HPL)",
+      description: "High Pressure Laminates for superior surface finishing",
+      products: ["Decorative Laminates", "Compact Laminates", "Industrial Laminates"],
       icon: "🎨",
       color: "bg-purple-500/10 text-purple-600",
     },
     {
-      title: "Material Handling",
-      description: "Efficient logistics and transport solutions",
-      products: ["Prestar Wheelbarrows", "Mystar Trolleys", "Platform Carts"],
+      title: "PVC Edge Banding",
+      description: "Quality edge finishing solutions for furniture",
+      products: ["Solid Color Bands", "Woodgrain Bands", "High Gloss Bands"],
+      icon: "📐",
+      color: "bg-amber-500/10 text-amber-600",
+    },
+    {
+      title: "Prestar Metal Wheelbarrows",
+      description: "Professional-grade wheelbarrows and equipment",
+      products: ["3 Cu.Ft Wheelbarrow", "Heavy Duty Wheelbarrow", "Spare Wheels"],
+      icon: "🛠️",
+      color: "bg-blue-500/10 text-blue-600",
+    },
+    {
+      title: "Foldable Platform Trolleys",
+      description: "Efficient logistics and material handling",
+      products: ["Mystar Platform Trolley", "Multi-Deck Trolley", "Netting Trolley"],
       icon: "🛒",
       color: "bg-rose-500/10 text-rose-600",
+    },
+    {
+      title: "Oman Nails & Hardware",
+      description: "Quality nails, screws, and fixing solutions",
+      products: ["Oman Wire Nails", "Lost Head Nails", "G.I. Binding Wire"],
+      icon: "🔩",
+      color: "bg-slate-500/10 text-slate-600",
     },
   ];
 
@@ -58,8 +59,8 @@ const Products = () => {
             Complete Building Solutions
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            From foundation to finish, we provide comprehensive building materials 
-            to meet all your construction and woodworking needs.
+            From premium adhesives to laminates, we provide comprehensive building materials 
+            to meet all your construction and industrial needs.
           </p>
         </div>
 
@@ -95,13 +96,15 @@ const Products = () => {
         </div>
 
         <div className="text-center">
-          <Button
-            size="lg"
-            className="bg-primary hover:bg-teal-dark text-primary-foreground gap-2"
-          >
-            View Full Catalog
-            <ArrowRight className="w-5 h-5" />
-          </Button>
+          <Link to="/products">
+            <Button
+              size="lg"
+              className="bg-primary hover:bg-teal-dark text-primary-foreground gap-2"
+            >
+              View Full Catalog
+              <ArrowRight className="w-5 h-5" />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
