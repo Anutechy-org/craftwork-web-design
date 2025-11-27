@@ -26,7 +26,6 @@ const Brands = () => {
       { name: "Watershield", desc: "Waterproof with excellent spreadability" },
       { name: "LaminoNXT", desc: "Next generation rubber adhesive technology" },
       { name: "Nano", desc: "Nano-based technology for superfast bonding" },
-      { name: "VAMIWOOD", desc: "Premium melamine wood finish range" },
     ],
     highlights: [
       "Industry-leading bond strength",
