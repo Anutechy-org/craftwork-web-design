@@ -203,12 +203,12 @@ const Brands = () => {
                     <span className="text-sm text-primary font-medium">{brand.origin}</span>
                   </div>
                   {brand.logo ? (
-                    <div className="w-20 h-14 flex items-center justify-center">
+                    <div className="w-32 h-24 flex items-center justify-center">
                       <img src={brand.logo} alt={`${brand.name} logo`} className="max-w-full max-h-full object-contain" />
                     </div>
                   ) : (
-                    <div className="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center">
-                      <span className="text-2xl font-bold text-primary">{brand.name.charAt(0)}</span>
+                    <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center">
+                      <span className="text-3xl font-bold text-primary">{brand.name.charAt(0)}</span>
                     </div>
                   )}
                 </div>
