@@ -10,9 +10,9 @@ const Header = () => {
 
   const navLinks = [
     { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
     { name: "Products", href: "/products" },
     { name: "Brands", href: "/brands" },
-    { name: "About", href: "/about" },
     { name: "Career", href: "/career" },
     { name: "Contact", href: "/contact" },
   ];
@@ -28,9 +28,9 @@ const Header = () => {
       <div className="bg-secondary text-secondary-foreground py-2">
         <div className="container-custom flex items-center justify-between text-sm">
           <div className="hidden md:flex items-center gap-6">
-            <a href="tel:+97142697359" className="flex items-center gap-2 hover:text-primary transition-colors">
+            <a href="tel:+97165248148" className="flex items-center gap-2 hover:text-primary transition-colors">
               <Phone className="w-4 h-4" />
-              +971 04 269 7359
+              +971 6 524 8148
             </a>
             <a href="mailto:info@craftworktrading.com" className="flex items-center gap-2 hover:text-primary transition-colors">
               <Mail className="w-4 h-4" />
@@ -68,11 +68,12 @@ const Header = () => {
           </div>
 
           <div className="hidden lg:block">
-            <Link to="/contact">
-              <Button variant="default" className="bg-primary hover:bg-teal-dark text-primary-foreground">
-                Get Quote
+            <a href="tel:+97165248148">
+              <Button variant="default" className="bg-primary hover:bg-teal-dark text-primary-foreground gap-2">
+                <Phone className="w-4 h-4" />
+                Call Us Now
               </Button>
-            </Link>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -103,11 +104,12 @@ const Header = () => {
                   {link.name}
                 </Link>
               ))}
-              <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
-                <Button variant="default" className="bg-primary hover:bg-teal-dark text-primary-foreground w-full mt-2">
-                  Get Quote
+              <a href="tel:+97165248148" onClick={() => setIsMenuOpen(false)}>
+                <Button variant="default" className="bg-primary hover:bg-teal-dark text-primary-foreground w-full mt-2 gap-2">
+                  <Phone className="w-4 h-4" />
+                  Call Us Now
                 </Button>
-              </Link>
+              </a>
             </div>
           </div>
         )}
