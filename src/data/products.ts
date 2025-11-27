@@ -155,8 +155,6 @@ export const productCategories: ProductCategory[] = [
       { name: "VAMICOL PVCXTRA", brand: "VAMICOL", desc: "PVC & Acrylic specialist", features: ["PVC bonding", "Acrylic compatible", "Clear finish"] },
       { name: "Jubiseal Epoxy", brand: "Jubilant", desc: "General purpose epoxy", features: ["2-part formula", "High strength", "Gap filling"] },
       { name: "Termilak Anti-Termite", brand: "VAMICOL", desc: "Wood protection coating", features: ["Termite protection", "Long lasting", "Easy application"] },
-      { name: "VAMIWOOD Melamine", brand: "VAMICOL", desc: "Premium wood finish", features: ["Clear coat", "Scratch resistant", "Professional finish"] },
-      { name: "VAMIWOOD Wood Stain", brand: "VAMICOL", desc: "Beautiful wood coloring", features: ["Rich colors", "Deep penetration", "Natural look"] },
     ],
     icon: "🏭",
     color: "bg-cyan-500/10 text-cyan-600",
