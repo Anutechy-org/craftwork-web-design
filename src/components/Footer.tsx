@@ -1,25 +1,27 @@
+import { Link } from "react-router-dom";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const Footer = () => {
   const quickLinks = [
-    { name: "Home", href: "#home" },
-    { name: "Products", href: "#products" },
-    { name: "Brands", href: "#brands" },
-    { name: "About Us", href: "#about" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "/" },
+    { name: "Products", href: "/products" },
+    { name: "Brands", href: "/brands" },
+    { name: "About Us", href: "/about" },
+    { name: "Career", href: "/career" },
+    { name: "Contact", href: "/contact" },
   ];
 
   const productCategories = [
-    "Wood Adhesives",
-    "Construction Tools",
-    "Tarpaulins",
-    "Hardware & Fasteners",
-    "Wood Finishes",
+    { name: "Wood Adhesives", href: "/products#wood-adhesives" },
+    { name: "Construction Tools", href: "/products#construction-tools" },
+    { name: "Tarpaulins", href: "/products#tarpaulins-&-sheets" },
+    { name: "Hardware & Fasteners", href: "/products#hardware-&-fasteners" },
+    { name: "Wood Finishes", href: "/products#wood-finishes-&-stains" },
   ];
 
   return (
-    <footer id="contact" className="bg-secondary text-secondary-foreground">
+    <footer className="bg-secondary text-secondary-foreground">
       <div className="container-custom py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Company Info */}
@@ -49,12 +51,12 @@ const Footer = () => {
             <ul className="space-y-3">
               {quickLinks.map((link) => (
                 <li key={link.name}>
-                  <a
-                    href={link.href}
+                  <Link
+                    to={link.href}
                     className="text-secondary-foreground/70 hover:text-primary transition-colors text-sm"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -65,13 +67,13 @@ const Footer = () => {
             <h4 className="font-bold text-lg mb-6">Products</h4>
             <ul className="space-y-3">
               {productCategories.map((category) => (
-                <li key={category}>
-                  <a
-                    href="#products"
+                <li key={category.name}>
+                  <Link
+                    to={category.href}
                     className="text-secondary-foreground/70 hover:text-primary transition-colors text-sm"
                   >
-                    {category}
-                  </a>
+                    {category.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -118,8 +120,8 @@ const Footer = () => {
             © {new Date().getFullYear()} Craftwork Trading Company. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm text-secondary-foreground/60">
-            <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>
+            <Link to="/contact" className="hover:text-primary transition-colors">Privacy Policy</Link>
+            <Link to="/contact" className="hover:text-primary transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>
