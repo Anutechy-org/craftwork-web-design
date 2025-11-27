@@ -1,18 +1,26 @@
 import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   const navLinks = [
-    { name: "Home", href: "#home" },
-    { name: "Products", href: "#products" },
-    { name: "Brands", href: "#brands" },
-    { name: "About", href: "#about" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", href: "/" },
+    { name: "Products", href: "/products" },
+    { name: "Brands", href: "/brands" },
+    { name: "About", href: "/about" },
+    { name: "Career", href: "/career" },
+    { name: "Contact", href: "/contact" },
   ];
+
+  const isActive = (href: string) => {
+    if (href === "/") return location.pathname === "/";
+    return location.pathname.startsWith(href);
+  };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
@@ -38,27 +46,33 @@ const Header = () => {
       {/* Main navigation */}
       <nav className="container-custom py-4">
         <div className="flex items-center justify-between">
-          <a href="#home" className="flex items-center">
+          <Link to="/" className="flex items-center">
             <img src={logo} alt="Craftwork Trading Company" className="h-10 md:h-12 w-auto" />
-          </a>
+          </Link>
 
           {/* Desktop navigation */}
           <div className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
-                href={link.href}
-                className="text-foreground hover:text-primary font-medium transition-colors underline-animation"
+                to={link.href}
+                className={`font-medium transition-colors underline-animation ${
+                  isActive(link.href) 
+                    ? "text-primary" 
+                    : "text-foreground hover:text-primary"
+                }`}
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
           </div>
 
           <div className="hidden lg:block">
-            <Button variant="default" className="bg-primary hover:bg-teal-dark text-primary-foreground">
-              Get Quote
-            </Button>
+            <Link to="/contact">
+              <Button variant="default" className="bg-primary hover:bg-teal-dark text-primary-foreground">
+                Get Quote
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -76,18 +90,24 @@ const Header = () => {
           <div className="lg:hidden mt-4 pb-4 border-t border-border pt-4 animate-fade-in">
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
-                <a
+                <Link
                   key={link.name}
-                  href={link.href}
-                  className="text-foreground hover:text-primary font-medium transition-colors py-2"
+                  to={link.href}
+                  className={`font-medium transition-colors py-2 ${
+                    isActive(link.href) 
+                      ? "text-primary" 
+                      : "text-foreground hover:text-primary"
+                  }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.name}
-                </a>
+                </Link>
               ))}
-              <Button variant="default" className="bg-primary hover:bg-teal-dark text-primary-foreground w-full mt-2">
-                Get Quote
-              </Button>
+              <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
+                <Button variant="default" className="bg-primary hover:bg-teal-dark text-primary-foreground w-full mt-2">
+                  Get Quote
+                </Button>
+              </Link>
             </div>
           </div>
         )}
