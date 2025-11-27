@@ -1,5 +1,6 @@
 import { ArrowRight, CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
@@ -40,20 +41,23 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-10 animate-fade-in-up opacity-0 stagger-4">
-            <Button
-              size="lg"
-              className="bg-primary hover:bg-teal-dark text-primary-foreground gap-2 text-base"
-            >
-              Explore Products
-              <ArrowRight className="w-5 h-5" />
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 text-base"
-            >
-              Contact Us
-            </Button>
+            <Link to="/products">
+              <Button
+                size="lg"
+                className="bg-primary hover:bg-teal-dark text-primary-foreground gap-2 text-base w-full sm:w-auto"
+              >
+                Explore Products
+                <ArrowRight className="w-5 h-5" />
+              </Button>
+            </Link>
+            <Link to="/contact">
+              <Button
+                size="lg"
+                className="bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white hover:bg-white/20 hover:border-white/50 text-base w-full sm:w-auto"
+              >
+                Contact Us
+              </Button>
+            </Link>
           </div>
 
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 animate-fade-in-up opacity-0 stagger-5">
