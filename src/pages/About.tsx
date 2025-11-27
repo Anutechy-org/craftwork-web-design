@@ -1,7 +1,8 @@
-import { Target, Users, Award, Truck, Building2, Globe, Handshake, TrendingUp } from "lucide-react";
+import { Target, Users, Award, Truck, Building2, Globe, Handshake, TrendingUp, Quote } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import aboutImage from "@/assets/about-image.jpg";
+import ownerImage from "@/assets/owner-moideen.jpg";
 
 const About = () => {
   const stats = [
@@ -25,7 +26,7 @@ const About = () => {
     {
       icon: Award,
       title: "Trusted Brands",
-      description: "Partnerships with industry-leading brands like VAMICOL, Don Quichotte, and Prestar ensure consistent quality.",
+      description: "Partnerships with industry-leading brands like VAMICOL, Prestar, and Jubilant ensure consistent quality.",
     },
     {
       icon: Truck,
@@ -82,6 +83,60 @@ const About = () => {
         </div>
       </section>
 
+      {/* Founder's Message Section */}
+      <section className="section-padding bg-muted">
+        <div className="container-custom">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            <div className="relative">
+              <div className="aspect-[3/4] max-w-md mx-auto rounded-2xl overflow-hidden shadow-elevated">
+                <img
+                  src={ownerImage}
+                  alt="Moideen Marunnan - Founder & Managing Director"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="absolute -bottom-4 -right-4 bg-primary rounded-xl p-4 text-primary-foreground hidden md:block shadow-lg">
+                <div className="text-lg font-bold">25+ Years</div>
+                <div className="text-sm text-primary-foreground/80">of Leadership</div>
+              </div>
+            </div>
+            
+            <div>
+              <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
+                Founder's Message
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-2">
+                Moideen Marunnan
+              </h2>
+              <p className="text-primary font-medium mb-6">Founder & Managing Director</p>
+              
+              <div className="relative">
+                <Quote className="w-12 h-12 text-primary/20 absolute -top-2 -left-4" />
+                <blockquote className="text-muted-foreground leading-relaxed space-y-4 pl-8">
+                  <p className="text-lg italic">
+                    "Our vision at Craftwork Trading has always been to build more than just a business – 
+                    we are building lasting relationships founded on trust, quality, and integrity."
+                  </p>
+                  <p>
+                    "When I started this company in 1998, I had a simple dream: to provide the construction 
+                    industry with reliable access to world-class building materials. Today, that dream has 
+                    grown into a reality that serves thousands of satisfied customers across the UAE and beyond."
+                  </p>
+                  <p>
+                    "We believe in partnering with the best brands in the industry, ensuring that every product 
+                    we supply meets the highest standards of quality. Our commitment to excellence has made us 
+                    the trusted choice for contractors, builders, and craftsmen who refuse to compromise on quality."
+                  </p>
+                  <p className="font-medium text-secondary">
+                    "Together, we build excellence – one material at a time."
+                  </p>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Story Section */}
       <section className="section-padding">
         <div className="container-custom">
@@ -99,9 +154,8 @@ const About = () => {
                 </p>
                 <p>
                   Over the years, we've built strong partnerships with global manufacturers 
-                  including Jubilant Industries (VAMICOL), Don Quichotte from Holland, Prestar 
-                  from Malaysia, and many others. These relationships allow us to offer an 
-                  unmatched range of quality products.
+                  including Jubilant Industries (VAMICOL), Prestar from Malaysia, and many others. 
+                  These relationships allow us to offer an unmatched range of quality products.
                 </p>
                 <p>
                   Today, we serve contractors, builders, carpenters, and DIY enthusiasts across 
@@ -130,7 +184,7 @@ const About = () => {
       </section>
 
       {/* Values */}
-      <section className="section-padding bg-muted">
+      <section className="section-padding bg-background">
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-4">Our Values</h2>
@@ -154,7 +208,7 @@ const About = () => {
       </section>
 
       {/* Timeline */}
-      <section className="section-padding">
+      <section className="section-padding bg-muted">
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-secondary mb-4">Our Journey</h2>
