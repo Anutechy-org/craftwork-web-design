@@ -97,19 +97,19 @@ const Brands = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      
+
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-secondary to-slate-light">
+      <section className="pt-32 pb-16 bg-gradient-to-br from-primary to-primary/10">
         <div className="container-custom">
           <div className="max-w-3xl">
-            <span className="inline-block px-4 py-2 bg-primary/20 text-primary-foreground rounded-full text-sm font-medium mb-4">
+            <span className="inline-block px-4 py-2 bg-white/80 text-primary rounded-full text-sm font-medium mb-4 mt-4">
               Our Partners
             </span>
-            <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
               Trusted Global Brands
             </h1>
-            <p className="text-lg text-primary-foreground/80">
-              We partner with world-renowned manufacturers to bring you the highest 
+            <p className="text-lg text-secondary/80">
+              We partner with world-renowned manufacturers to bring you the highest
               quality building materials and industrial supplies. Each brand represents excellence in their field.
             </p>
           </div>
@@ -124,7 +124,7 @@ const Brands = () => {
           </div>
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
             {[vamicolLogo, jubilantLogo, prestarLogo, mystarLogo, omanNailsLogo, silpaulinLogo].map((logo, index) => (
-              <div key={index} className="h-16 md:h-20 w-auto grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+              <div key={index} className="h-16 md:h-20 w-auto hover:scale-110 transition-all duration-300 opacity-100 hover:opacity-100">
                 <img src={logo} alt="Brand logo" className="h-full w-auto object-contain" />
               </div>
             ))}
@@ -143,15 +143,12 @@ const Brands = () => {
                   <span className="text-accent text-sm font-medium uppercase tracking-wider">
                     Featured Brand
                   </span>
-                  <div className="flex items-center gap-4 mt-4 mb-2">
-                    <img src={featuredBrand.logo} alt="VAMICOL Logo" className="h-16 w-auto" />
-                  </div>
-                  <h2 className="text-5xl md:text-6xl font-bold mb-2">{featuredBrand.name}</h2>
+                  <h2 className="text-5xl md:text-6xl text-white font-bold mb-2">{featuredBrand.name}</h2>
                   <p className="text-primary text-lg mb-6">{featuredBrand.tagline}</p>
                   <p className="text-secondary-foreground/80 mb-8 text-lg leading-relaxed">
                     {featuredBrand.description}
                   </p>
-                  
+
                   <div className="space-y-3 mb-8">
                     {featuredBrand.highlights.map((highlight) => (
                       <div key={highlight} className="flex items-center gap-3">
@@ -160,14 +157,14 @@ const Brands = () => {
                       </div>
                     ))}
                   </div>
-                  
+
                   <Link to="/products/vamicol-adhesives">
                     <Button className="bg-primary hover:bg-teal-dark text-primary-foreground">
                       View All VAMICOL Products
                     </Button>
                   </Link>
                 </div>
-                
+
                 <div className="grid grid-cols-2 gap-4">
                   {featuredBrand.products.map((product) => (
                     <div key={product.name} className="bg-secondary-foreground/10 rounded-xl p-4">
@@ -191,7 +188,7 @@ const Brands = () => {
               Each brand in our portfolio represents decades of expertise and commitment to quality.
             </p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 gap-8">
             {brands.map((brand) => (
               <div key={brand.name} className="card-elevated p-8 group">
@@ -212,9 +209,9 @@ const Brands = () => {
                     </div>
                   )}
                 </div>
-                
+
                 <p className="text-muted-foreground mb-6">{brand.description}</p>
-                
+
                 <div className="flex flex-wrap gap-2 mb-6">
                   {brand.products.map((product) => (
                     <span key={product} className="px-3 py-1 bg-muted rounded-full text-sm text-foreground">
@@ -222,7 +219,7 @@ const Brands = () => {
                     </span>
                   ))}
                 </div>
-                
+
                 <div className="space-y-2">
                   {brand.highlights.map((highlight) => (
                     <div key={highlight} className="flex items-center gap-2 text-sm text-muted-foreground">

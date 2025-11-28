@@ -36,9 +36,9 @@ const ProductDetail = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      
+
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-secondary to-slate-light relative overflow-hidden">
+      <section className="pt-32 pb-16 bg-gradient-to-br from-primary to-primary/10 relative overflow-hidden">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -49,10 +49,10 @@ const ProductDetail = () => {
               <div className={`w-16 h-16 ${category.color} rounded-xl flex items-center justify-center text-3xl mb-6`}>
                 {category.icon}
               </div>
-              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground mb-4">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-secondary mb-4">
                 {category.title}
               </h1>
-              <p className="text-lg text-primary-foreground/80 mb-8">
+              <p className="text-lg text-secondary/80 mb-8">
                 {category.longDescription}
               </p>
               <a href="tel:+97165248148">
@@ -64,8 +64,8 @@ const ProductDetail = () => {
             </div>
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
-                <img 
-                  src={category.image} 
+                <img
+                  src={category.image}
                   alt={category.title}
                   className="w-full h-[300px] md:h-[400px] object-cover"
                 />
@@ -102,7 +102,7 @@ const ProductDetail = () => {
                   {product.name}
                 </h3>
                 <p className="text-muted-foreground mb-4">{product.desc}</p>
-                
+
                 {product.features && (
                   <div className="space-y-2 pt-4 border-t border-border">
                     {product.features.map((feature, idx) => (
@@ -124,7 +124,7 @@ const ProductDetail = () => {
         <div className="container-custom">
           <div className="flex justify-between items-center">
             {prevCategory ? (
-              <Link 
+              <Link
                 to={`/products/${prevCategory.id}`}
                 className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
               >
@@ -133,9 +133,9 @@ const ProductDetail = () => {
                 <span className="sm:hidden">Previous</span>
               </Link>
             ) : <div />}
-            
+
             {nextCategory ? (
-              <Link 
+              <Link
                 to={`/products/${nextCategory.id}`}
                 className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
               >
@@ -155,7 +155,7 @@ const ProductDetail = () => {
             Interested in {category.title}?
           </h2>
           <p className="text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-            Contact our team for bulk orders, product specifications, or technical support. 
+            Contact our team for bulk orders, product specifications, or technical support.
             We're here to help with all your building material needs.
           </p>
           <a href="tel:+97165248148">

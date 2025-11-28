@@ -10,36 +10,21 @@ const Products = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      
+
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-secondary to-slate-light">
+      <section className="pt-32 pb-16 bg-gradient-to-br from-primary to-primary/10">
         <div className="container-custom">
           <div className="max-w-3xl">
-            <span className="inline-block px-4 py-2 bg-primary/20 text-primary-foreground rounded-full text-sm font-medium mb-4">
-              Product Catalog
+            <span className="inline-block px-4 py-2 bg-white/80 text-primary rounded-full text-sm font-medium mb-4 mt-4">
+              Product Catalogue
             </span>
-            <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
               Complete Building Materials Solutions
             </h1>
-            <p className="text-lg text-primary-foreground/80 mb-8">
-              Browse our comprehensive range of VAMICOL premium adhesives, laminates, 
+            <p className="text-lg text-secondary/80 mb-8">
+              Browse our comprehensive range of VAMICOL premium adhesives, laminates,
               edge banding, and construction supplies from world-renowned brands.
             </p>
-            
-            {/* Search Bar */}
-            <div className="flex gap-4 max-w-xl">
-              <div className="relative flex-1">
-                <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-muted-foreground" />
-                <Input 
-                  placeholder="Search products..." 
-                  className="pl-10 bg-background/90 border-0"
-                />
-              </div>
-              <Button variant="outline" className="bg-background/90 border-0 gap-2">
-                <Filter className="w-4 h-4" />
-                Filter
-              </Button>
-            </div>
           </div>
         </div>
       </section>
@@ -49,14 +34,14 @@ const Products = () => {
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {productCategories.map((category) => (
-              <Link 
-                key={category.id} 
+              <Link
+                key={category.id}
                 to={`/products/${category.id}`}
                 className="card-elevated group cursor-pointer overflow-hidden"
               >
                 <div className="relative h-48 overflow-hidden">
-                  <img 
-                    src={category.image} 
+                  <img
+                    src={category.image}
                     alt={category.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
@@ -89,7 +74,7 @@ const Products = () => {
             Need Product Information?
           </h2>
           <p className="text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-            Contact our team for bulk orders, special requirements, or product inquiries. 
+            Contact our team for bulk orders, special requirements, or product inquiries.
             We're here to help with all your building material needs.
           </p>
           <a href="tel:+97165248148">

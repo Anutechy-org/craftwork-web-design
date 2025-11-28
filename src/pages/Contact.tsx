@@ -20,7 +20,7 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     const emailBody = `
 Name: ${formData.name}
 Email: ${formData.email}
@@ -30,10 +30,10 @@ Company: ${formData.company || 'Not provided'}
 Message:
 ${formData.message}
     `.trim();
-    
+
     const mailtoUrl = `mailto:info@craftworktrading.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(emailBody)}`;
     window.open(mailtoUrl, '_blank');
-    
+
     toast({
       title: "Email Client Opened",
       description: "Please send the email from your email client to complete your inquiry.",
@@ -78,19 +78,19 @@ ${formData.message}
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      
+
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-secondary to-slate-light">
+      <section className="pt-32 pb-16 bg-gradient-to-br from-primary to-primary/10">
         <div className="container-custom">
           <div className="max-w-3xl">
-            <span className="inline-block px-4 py-2 bg-primary/20 text-primary-foreground rounded-full text-sm font-medium mb-4">
+            <span className="inline-block px-4 py-2 bg-white/80 text-primary rounded-full text-sm font-medium mb-4 mt-4">
               Get In Touch
             </span>
-            <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
               Contact Us
             </h1>
-            <p className="text-lg text-primary-foreground/80">
-              Have questions about our products or services? We're here to help. 
+            <p className="text-lg text-secondary/80">
+              Have questions about our products or services? We're here to help.
               Reach out to us through any of the channels below.
             </p>
           </div>
@@ -126,7 +126,7 @@ ${formData.message}
                 <MessageSquare className="w-6 h-6 text-primary" />
                 <h2 className="text-2xl font-bold text-secondary">Send Us a Message</h2>
               </div>
-              
+
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
@@ -151,7 +151,7 @@ ${formData.message}
                     />
                   </div>
                 </div>
-                
+
                 <div className="grid sm:grid-cols-2 gap-4">
                   <div>
                     <label className="text-sm font-medium text-foreground mb-2 block">Phone</label>
@@ -172,7 +172,7 @@ ${formData.message}
                     />
                   </div>
                 </div>
-                
+
                 <div>
                   <label className="text-sm font-medium text-foreground mb-2 block">Subject *</label>
                   <Input
@@ -183,7 +183,7 @@ ${formData.message}
                     required
                   />
                 </div>
-                
+
                 <div>
                   <label className="text-sm font-medium text-foreground mb-2 block">Message *</label>
                   <Textarea
@@ -195,13 +195,13 @@ ${formData.message}
                     required
                   />
                 </div>
-                
+
                 <Button type="submit" size="lg" className="w-full sm:w-auto gap-2">
                   Send Message <Send className="w-4 h-4" />
                 </Button>
               </form>
             </div>
-            
+
             {/* Map & Departments */}
             <div className="space-y-8">
               {/* Map Placeholder */}
@@ -217,7 +217,7 @@ ${formData.message}
                   title="Craftwork Trading Location"
                 />
               </div>
-              
+
               {/* Department Contacts */}
               <div>
                 <h3 className="text-xl font-bold text-secondary mb-4">Contact by Department</h3>
@@ -228,8 +228,8 @@ ${formData.message}
                         <h4 className="font-medium text-secondary">{dept.name}</h4>
                         <p className="text-xs text-muted-foreground">{dept.desc}</p>
                       </div>
-                      <a 
-                        href={`mailto:${dept.email}`} 
+                      <a
+                        href={`mailto:${dept.email}`}
                         className="text-sm text-primary hover:underline"
                       >
                         {dept.email}
@@ -250,7 +250,7 @@ ${formData.message}
             Need Immediate Assistance?
           </h2>
           <p className="text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-            Our team is available during business hours to answer your calls. 
+            Our team is available during business hours to answer your calls.
             For urgent inquiries, reach us directly at our hotline.
           </p>
           <a href="tel:+97165248148">

@@ -134,7 +134,7 @@ const Career = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     const emailBody = `
 Job Application - ${formData.position}
 
@@ -148,10 +148,10 @@ ${formData.message || 'Not provided'}
 
 Note: Please attach your CV to this email before sending.
     `.trim();
-    
+
     const mailtoUrl = `mailto:careers@craftworktrading.com?subject=${encodeURIComponent(`Job Application: ${formData.position}`)}&body=${encodeURIComponent(emailBody)}`;
     window.open(mailtoUrl, '_blank');
-    
+
     toast({
       title: "Email Client Opened",
       description: "Please attach your CV and send the email to complete your application.",
@@ -166,19 +166,19 @@ Note: Please attach your CV to this email before sending.
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      
+
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-secondary to-slate-light">
+      <section className="pt-32 pb-16 bg-gradient-to-br from-primary to-primary/10">
         <div className="container-custom">
           <div className="max-w-3xl">
-            <span className="inline-block px-4 py-2 bg-primary/20 text-primary-foreground rounded-full text-sm font-medium mb-4">
+            <span className="inline-block px-4 py-2 bg-white/80 text-primary rounded-full text-sm font-medium mb-4 mt-4">
               Join Our Team
             </span>
-            <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
               Build Your Career With Us
             </h1>
-            <p className="text-lg text-primary-foreground/80">
-              Join Craftwork Trading and be part of a dynamic team shaping the future 
+            <p className="text-lg text-secondary/80">
+              Join Craftwork Trading and be part of a dynamic team shaping the future
               of building materials distribution in the UAE.
             </p>
           </div>
@@ -211,7 +211,7 @@ Note: Please attach your CV to this email before sending.
               Explore our current opportunities and find your perfect role.
             </p>
           </div>
-          
+
           <div className="max-w-4xl mx-auto space-y-4">
             {openPositions.map((job) => (
               <div key={job.id} className="card-elevated overflow-hidden">
@@ -239,11 +239,11 @@ Note: Please attach your CV to this email before sending.
                     <ChevronDown className="w-5 h-5 text-muted-foreground" />
                   )}
                 </button>
-                
+
                 {expandedJob === job.id && (
                   <div className="px-6 pb-6 border-t border-border pt-4 animate-fade-in">
                     <p className="text-muted-foreground mb-6">{job.description}</p>
-                    
+
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
                         <h4 className="font-semibold text-secondary mb-3">Requirements</h4>
@@ -268,7 +268,7 @@ Note: Please attach your CV to this email before sending.
                         </ul>
                       </div>
                     </div>
-                    
+
                     <Button className="mt-6" onClick={() => {
                       setFormData({ ...formData, position: job.title });
                       document.getElementById('apply-form')?.scrollIntoView({ behavior: 'smooth' });
@@ -293,7 +293,7 @@ Note: Please attach your CV to this email before sending.
                 Interested in joining our team? Fill out the form below and attach your CV.
               </p>
             </div>
-            
+
             <form onSubmit={handleSubmit} className="card-elevated p-8 space-y-6">
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
@@ -318,7 +318,7 @@ Note: Please attach your CV to this email before sending.
                   />
                 </div>
               </div>
-              
+
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
                   <label className="text-sm font-medium text-foreground mb-2 block">Phone *</label>
@@ -341,7 +341,7 @@ Note: Please attach your CV to this email before sending.
                   />
                 </div>
               </div>
-              
+
               <div>
                 <label className="text-sm font-medium text-foreground mb-2 block">Cover Letter / Message</label>
                 <Textarea
@@ -352,13 +352,13 @@ Note: Please attach your CV to this email before sending.
                   rows={5}
                 />
               </div>
-              
+
               <div>
                 <label className="text-sm font-medium text-foreground mb-2 block">Upload CV</label>
                 <Input type="file" accept=".pdf,.doc,.docx" className="cursor-pointer" />
                 <p className="text-xs text-muted-foreground mt-1">PDF, DOC, or DOCX (Max 5MB)</p>
               </div>
-              
+
               <Button type="submit" size="lg" className="w-full gap-2">
                 Submit Application <Send className="w-4 h-4" />
               </Button>
@@ -374,7 +374,7 @@ Note: Please attach your CV to this email before sending.
             Don't See Your Role?
           </h2>
           <p className="text-accent-foreground/80 mb-8 max-w-2xl mx-auto">
-            We're always looking for talented individuals. Send us your CV and we'll 
+            We're always looking for talented individuals. Send us your CV and we'll
             keep it on file for future opportunities.
           </p>
           <a href="mailto:careers@craftworktrading.com">

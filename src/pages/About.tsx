@@ -47,19 +47,19 @@ const About = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      
+
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-secondary to-slate-light">
+      <section className="pt-32 pb-16 bg-gradient-to-br from-primary to-primary/10">
         <div className="container-custom">
           <div className="max-w-3xl">
-            <span className="inline-block px-4 py-2 bg-primary/20 text-primary-foreground rounded-full text-sm font-medium mb-4">
+            <span className="inline-block px-4 py-2 bg-white/80 text-primary rounded-full text-sm font-medium mb-4 mt-4">
               About Us
             </span>
-            <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
               Building Trust Since 1998
             </h1>
-            <p className="text-lg text-primary-foreground/80">
-              For over two decades, Craftwork Trading Company has been the region's trusted 
+            <p className="text-lg text-secondary/80">
+              For over two decades, Craftwork Trading Company has been the region's trusted
               partner for premium building materials and construction supplies.
             </p>
           </div>
@@ -100,7 +100,7 @@ const About = () => {
                 <div className="text-sm text-primary-foreground/80">of Leadership</div>
               </div>
             </div>
-            
+
             <div>
               <span className="inline-block px-4 py-2 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4">
                 Founder's Message
@@ -109,22 +109,22 @@ const About = () => {
                 Moideen Marunnan
               </h2>
               <p className="text-primary font-medium mb-6">Founder & Managing Director</p>
-              
+
               <div className="relative">
                 <Quote className="w-12 h-12 text-primary/20 absolute -top-2 -left-4" />
                 <blockquote className="text-muted-foreground leading-relaxed space-y-4 pl-8">
                   <p className="text-lg italic">
-                    "Our vision at Craftwork Trading has always been to build more than just a business – 
+                    "Our vision at Craftwork Trading has always been to build more than just a business –
                     we are building lasting relationships founded on trust, quality, and integrity."
                   </p>
                   <p>
-                    "When I started this company in 1998, I had a simple dream: to provide the construction 
-                    industry with reliable access to world-class building materials. Today, that dream has 
+                    "When I started this company in 1998, I had a simple dream: to provide the construction
+                    industry with reliable access to world-class building materials. Today, that dream has
                     grown into a reality that serves thousands of satisfied customers across the UAE and beyond."
                   </p>
                   <p>
-                    "We believe in partnering with the best brands in the industry, ensuring that every product 
-                    we supply meets the highest standards of quality. Our commitment to excellence has made us 
+                    "We believe in partnering with the best brands in the industry, ensuring that every product
+                    we supply meets the highest standards of quality. Our commitment to excellence has made us
                     the trusted choice for contractors, builders, and craftsmen who refuse to compromise on quality."
                   </p>
                   <p className="font-medium text-secondary">
@@ -147,24 +147,24 @@ const About = () => {
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  Craftwork Trading Company was founded in 1998 in Dubai with a simple mission: 
-                  to provide the construction industry with reliable access to the world's best 
-                  building materials. What started as a small trading operation has grown into 
+                  Craftwork Trading Company was founded in 1998 in Dubai with a simple mission:
+                  to provide the construction industry with reliable access to the world's best
+                  building materials. What started as a small trading operation has grown into
                   one of the region's most trusted suppliers.
                 </p>
                 <p>
-                  Over the years, we've built strong partnerships with global manufacturers 
-                  including Jubilant Industries (VAMICOL), Prestar from Malaysia, and many others. 
+                  Over the years, we've built strong partnerships with global manufacturers
+                  including Jubilant Industries (VAMICOL), Prestar from Malaysia, and many others.
                   These relationships allow us to offer an unmatched range of quality products.
                 </p>
                 <p>
-                  Today, we serve contractors, builders, carpenters, and DIY enthusiasts across 
-                  the UAE and GCC region. Our commitment to quality, competitive pricing, and 
+                  Today, we serve contractors, builders, carpenters, and DIY enthusiasts across
+                  the UAE and GCC region. Our commitment to quality, competitive pricing, and
                   excellent service has earned us the trust of over 1,000 satisfied clients.
                 </p>
               </div>
             </div>
-            
+
             <div className="relative">
               <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-elevated">
                 <img
@@ -192,7 +192,7 @@ const About = () => {
               These core principles guide everything we do at Craftwork Trading.
             </p>
           </div>
-          
+
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((value) => (
               <div key={value.title} className="card-elevated p-6 text-center">
@@ -216,7 +216,7 @@ const About = () => {
               Key milestones in our growth story.
             </p>
           </div>
-          
+
           <div className="max-w-4xl mx-auto">
             <div className="space-y-8">
               {milestones.map((milestone, index) => (
@@ -248,16 +248,16 @@ const About = () => {
             <div className="bg-secondary-foreground/10 rounded-2xl p-8">
               <h3 className="text-2xl font-bold text-secondary-foreground mb-4">Our Mission</h3>
               <p className="text-secondary-foreground/80 leading-relaxed">
-                To be the region's most trusted supplier of building materials by consistently 
-                delivering quality products, competitive pricing, and exceptional customer service 
+                To be the region's most trusted supplier of building materials by consistently
+                delivering quality products, competitive pricing, and exceptional customer service
                 that helps our clients build with confidence.
               </p>
             </div>
             <div className="bg-primary/20 rounded-2xl p-8">
               <h3 className="text-2xl font-bold text-secondary-foreground mb-4">Our Vision</h3>
               <p className="text-secondary-foreground/80 leading-relaxed">
-                To be the first choice for construction professionals across the Middle East, 
-                setting industry standards for product quality, service excellence, and 
+                To be the first choice for construction professionals across the Middle East,
+                setting industry standards for product quality, service excellence, and
                 sustainable building practices.
               </p>
             </div>

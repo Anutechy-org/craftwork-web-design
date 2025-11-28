@@ -43,19 +43,19 @@ const GroupCompanies = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      
+
       {/* Hero Section */}
-      <section className="pt-32 pb-16 bg-gradient-to-br from-secondary to-slate-light">
+      <section className="pt-32 pb-16 bg-gradient-to-br from-primary to-primary/10">
         <div className="container-custom">
           <div className="max-w-3xl">
-            <span className="inline-block px-4 py-2 bg-primary/20 text-primary-foreground rounded-full text-sm font-medium mb-4">
+            <span className="inline-block px-4 py-2 bg-white/80 text-primary rounded-full text-sm font-medium mb-4 mt-4">
               Our Network
             </span>
-            <h1 className="text-4xl md:text-5xl font-bold text-primary-foreground mb-6">
+            <h1 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
               Group of Companies
             </h1>
-            <p className="text-lg text-primary-foreground/80">
-              Craftwork Trading is part of a diversified business group with operations spanning 
+            <p className="text-lg text-secondary/80">
+              Craftwork Trading is part of a diversified business group with operations spanning
               transportation, logistics, and petroleum trading across the UAE.
             </p>
           </div>
@@ -70,7 +70,7 @@ const GroupCompanies = () => {
               Our Sister Companies
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Each company in our group operates independently while sharing the same commitment 
+              Each company in our group operates independently while sharing the same commitment
               to quality, reliability, and customer satisfaction.
             </p>
           </div>
@@ -84,7 +84,7 @@ const GroupCompanies = () => {
                 <div className={`w-16 h-16 ${company.color} rounded-xl flex items-center justify-center mb-6`}>
                   <company.icon className="w-8 h-8" />
                 </div>
-                
+
                 <h3 className="text-xl font-bold text-secondary mb-3">
                   {company.name}
                 </h3>
@@ -97,21 +97,21 @@ const GroupCompanies = () => {
                     <MapPin className="w-4 h-4 text-primary flex-shrink-0" />
                     <span className="text-foreground">{company.location}</span>
                   </div>
-                  
+
                   <div className="flex items-center gap-3 text-sm">
                     <Phone className="w-4 h-4 text-primary flex-shrink-0" />
-                    <a 
+                    <a
                       href={`tel:${company.phone.replace(/\s/g, '')}`}
                       className="text-foreground hover:text-primary transition-colors"
                     >
                       {company.phone}
                     </a>
                   </div>
-                  
+
                   {company.email && (
                     <div className="flex items-center gap-3 text-sm">
                       <Mail className="w-4 h-4 text-primary flex-shrink-0" />
-                      <a 
+                      <a
                         href={`mailto:${company.email}`}
                         className="text-foreground hover:text-primary transition-colors"
                       >
@@ -119,11 +119,11 @@ const GroupCompanies = () => {
                       </a>
                     </div>
                   )}
-                  
+
                   {company.website && (
                     <div className="flex items-center gap-3 text-sm">
                       <Globe className="w-4 h-4 text-primary flex-shrink-0" />
-                      <a 
+                      <a
                         href={`https://${company.website}`}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -152,9 +152,9 @@ const GroupCompanies = () => {
                 Craftwork Building Materials Trading Co. LLC
               </h2>
               <p className="text-muted-foreground mb-6 leading-relaxed">
-                As the flagship company of our group, Craftwork Trading has been serving the 
-                construction industry since 1998. We specialize in premium building materials, 
-                adhesives, and construction supplies, partnering with world-renowned brands 
+                As the flagship company of our group, Craftwork Trading has been serving the
+                construction industry since 1998. We specialize in premium building materials,
+                adhesives, and construction supplies, partnering with world-renowned brands
                 to deliver quality products across the UAE and GCC region.
               </p>
               <div className="space-y-3 mb-8">
@@ -182,7 +182,7 @@ const GroupCompanies = () => {
                 </Button>
               </a>
             </div>
-            
+
             <div className="bg-secondary rounded-2xl p-8">
               <h3 className="text-xl font-bold mb-6 text-white">Our Group Strengths</h3>
               <div className="space-y-4">
@@ -213,7 +213,7 @@ const GroupCompanies = () => {
             Partner With Our Group
           </h2>
           <p className="text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-            Whether you need building materials, transportation services, or fuel supplies, 
+            Whether you need building materials, transportation services, or fuel supplies,
             our group of companies has you covered.
           </p>
           <a href="tel:+97165248148">

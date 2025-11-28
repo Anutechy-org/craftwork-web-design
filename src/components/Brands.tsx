@@ -8,6 +8,11 @@ import prestarLogo from "@/assets/brands/prestar-logo.png";
 import mystarLogo from "@/assets/brands/mystar-logo.png";
 import omanNailsLogo from "@/assets/brands/oman-nails-logo.png";
 import silpaulinLogo from "@/assets/brands/silpaulin-logo.png";
+import donLogo from "@/assets/brands/don-logo.png";
+import aquabondLogo from "@/assets/brands/aquabond-logo.png";
+import laminoLogo from "@/assets/brands/lamino-logo.png";
+import supremoLogo from "@/assets/brands/supremo-logo.png";
+import watershieldLogo from "@/assets/brands/watershield-logo.png";
 
 const Brands = () => {
   const mainBrands = [
@@ -53,6 +58,14 @@ const Brands = () => {
       featured: false,
       logo: silpaulinLogo,
     },
+    {
+      name: "DON",
+      description: "Quality steel nails & hardware",
+      tagline: "Oman",
+      featured: false,
+      logo: donLogo,
+    },
+
   ];
 
   return (
@@ -66,7 +79,7 @@ const Brands = () => {
             Trusted Global Brands
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            We partner with world-renowned manufacturers to bring you the highest 
+            We partner with world-renowned manufacturers to bring you the highest
             quality building materials and industrial supplies.
           </p>
         </div>
@@ -74,7 +87,7 @@ const Brands = () => {
         {/* Brand Logos Strip */}
         <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 mb-12">
           {[vamicolLogo, jubilantLogo, prestarLogo, mystarLogo, omanNailsLogo, silpaulinLogo].map((logo, index) => (
-            <div key={index} className="h-14 md:h-16 w-auto grayscale hover:grayscale-0 transition-all duration-300 opacity-70 hover:opacity-100">
+            <div key={index} className="h-14 md:h-16 w-auto transition-all hover:scale-110 duration-300 opacity-100 hover:opacity-100">
               <img src={logo} alt="Brand logo" className="h-full w-auto object-contain" />
             </div>
           ))}
@@ -89,13 +102,13 @@ const Brands = () => {
                 <span className="text-accent text-sm font-medium uppercase tracking-wider">
                   Featured Brand
                 </span>
-                <div className="flex items-center gap-4 mt-2 mb-4">
-                  <img src={vamicolLogo} alt="VAMICOL Logo" className="h-12 md:h-16 w-auto" />
+
+                <div className="w-32 h-12 bg-white rounded-xl flex items-center justify-center p-2">
+                  <img src={vamicolLogo} alt="VAMICOL" className="w-full h-full object-contain" />
                 </div>
-                <h3 className="text-4xl md:text-5xl font-bold mb-4">VAMICOL</h3>
                 <p className="text-secondary-foreground/80 max-w-lg mb-4">
-                  Industry-leading premium adhesives and specialty coatings. 
-                  From All Rounder to Aquabond, VAMICOL delivers exceptional bonding 
+                  Industry-leading premium adhesives and specialty coatings.
+                  From All Rounder to Aquabond, VAMICOL delivers exceptional bonding
                   solutions for every application.
                 </p>
                 <div className="flex flex-wrap gap-2">
@@ -110,8 +123,8 @@ const Brands = () => {
                 </div>
               </div>
               <div className="flex-shrink-0">
-                <div className="w-32 h-32 md:w-40 md:h-40 bg-primary/20 rounded-2xl flex items-center justify-center p-4">
-                  <img src={vamicolLogo} alt="VAMICOL" className="w-full h-full object-contain" />
+                <div className="w-32 h-32 md:w-40 md:h-40 bg-white rounded-2xl flex items-center justify-center p-4">
+                  <img src={jubilantLogo} alt="Jubilant Agri & Consumer" className="w-full h-full object-contain" />
                 </div>
               </div>
             </div>
@@ -143,8 +156,8 @@ const Brands = () => {
 
         {/* View All Brands Link */}
         <div className="text-center mt-10">
-          <Link 
-            to="/brands" 
+          <Link
+            to="/brands"
             className="inline-flex items-center gap-2 text-primary hover:text-teal-dark font-medium transition-colors"
           >
             View All Brands
