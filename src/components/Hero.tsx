@@ -19,7 +19,7 @@ const Hero = () => {
           alt="Building materials warehouse"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-secondary/95 via-secondary/80 to-secondary/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-secondary/25 via-secondary/80 to-secondary/10" />
       </div>
 
       {/* Content */}
@@ -30,13 +30,13 @@ const Hero = () => {
           </span>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight mb-6 animate-fade-in-up opacity-0 stagger-2">
-            Building Excellence,{" "}
-            <span className="text-accent">One Material</span> at a Time
+            Crafting Quality,{" "}
+            <span className="text-accent">Building</span> Trust.
           </h1>
 
           <p className="text-lg md:text-xl text-primary-foreground/90 mb-8 leading-relaxed animate-fade-in-up opacity-0 stagger-3">
-            Your trusted partner for premium construction materials, adhesives, 
-            and building supplies. Quality products from world-renowned brands 
+            Your trusted partner for premium construction materials, adhesives,
+            and building supplies. Quality products from world-renowned brands
             delivered with excellence.
           </p>
 
@@ -44,10 +44,9 @@ const Hero = () => {
             <Link to="/products">
               <Button
                 size="lg"
-                className="bg-primary hover:bg-teal-dark text-primary-foreground gap-2 text-base w-full sm:w-auto"
+                className="bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white hover:bg-white/20 hover:border-white/50 text-base w-full sm:w-auto"
               >
                 Explore Products
-                <ArrowRight className="w-5 h-5" />
               </Button>
             </Link>
             <Link to="/contact">

@@ -15,17 +15,16 @@ import silpaulinLogo from "@/assets/brands/silpaulin-logo.png";
 const Brands = () => {
   const featuredBrand = {
     name: "VAMICOL",
-    tagline: "Jubilant Industries",
+    tagline: "Jubilant Agri & Consumer Products MEA",
     logo: vamicolLogo,
     description: "Industry-leading premium adhesives and specialty coatings. VAMICOL has been at the forefront of bonding technology, delivering exceptional quality for decades across the Middle East and beyond.",
     products: [
       { name: "All Rounder", desc: "Multi-purpose adhesive for long-lasting bonds" },
-      { name: "Aquabond", desc: "Heatproof & waterproof adhesive solution" },
-      { name: "Lamino", desc: "Anti-bubble, water resistant laminate adhesive" },
-      { name: "Supremo", desc: "D3 Certified with superfast drying" },
-      { name: "Watershield", desc: "Waterproof with excellent spreadability" },
-      { name: "LaminoNXT", desc: "Next generation rubber adhesive technology" },
-      { name: "Nano", desc: "Nano-based technology for superfast bonding" },
+      { name: "D3 Supremo", desc: "D3 Certified with superfast drying" },
+      { name: "Fast X", desc: "Waterproof with excellent spreadability" },
+      { name: "D4PUR", desc: "Next generation rubber adhesive technology" },
+      { name: "SQ100", desc: "Nano-based technology for superfast bonding" },
+      { name: "Jubi Spray", desc: "Nano-based technology for superfast bonding" },
     ],
     highlights: [
       "Industry-leading bond strength",
@@ -143,7 +142,9 @@ const Brands = () => {
                   <span className="text-accent text-sm font-medium uppercase tracking-wider">
                     Featured Brand
                   </span>
-                  <h2 className="text-5xl md:text-6xl text-white font-bold mb-2">{featuredBrand.name}</h2>
+                  <div className="w-32 h-12 bg-white rounded-xl flex items-center justify-center p-2">
+                    <img src={vamicolLogo} alt="VAMICOL" className="w-full h-full object-contain" />
+                  </div>
                   <p className="text-primary text-lg mb-6">{featuredBrand.tagline}</p>
                   <p className="text-secondary-foreground/80 mb-8 text-lg leading-relaxed">
                     {featuredBrand.description}

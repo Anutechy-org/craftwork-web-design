@@ -38,7 +38,7 @@ const Header = () => {
               info@craftworktrading.com
             </a>
           </div>
-          <span className="text-muted-foreground text-xs md:text-sm">
+          <span className="text-white text-xs md:text-sm">
             Your Trusted Building Materials Partner
           </span>
         </div>
@@ -57,11 +57,10 @@ const Header = () => {
               <Link
                 key={link.name}
                 to={link.href}
-                className={`font-medium transition-colors underline-animation ${
-                  isActive(link.href) 
-                    ? "text-primary" 
-                    : "text-foreground hover:text-primary"
-                }`}
+                className={`font-medium transition-colors underline-animation ${isActive(link.href)
+                  ? "text-primary"
+                  : "text-foreground hover:text-primary"
+                  }`}
               >
                 {link.name}
               </Link>
@@ -95,11 +94,10 @@ const Header = () => {
                 <Link
                   key={link.name}
                   to={link.href}
-                  className={`font-medium transition-colors py-2 ${
-                    isActive(link.href) 
-                      ? "text-primary" 
-                      : "text-foreground hover:text-primary"
-                  }`}
+                  className={`font-medium transition-colors py-2 ${isActive(link.href)
+                    ? "text-primary"
+                    : "text-foreground hover:text-primary"
+                    }`}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.name}

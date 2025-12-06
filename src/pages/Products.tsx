@@ -1,4 +1,4 @@
-import { ArrowRight, Search, Filter, Phone } from "lucide-react";
+import { ArrowRight, Search, Filter, Phone, Download } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -14,17 +14,27 @@ const Products = () => {
       {/* Hero Section */}
       <section className="pt-32 pb-16 bg-gradient-to-br from-primary to-primary/10">
         <div className="container-custom">
-          <div className="max-w-3xl">
-            <span className="inline-block px-4 py-2 bg-white/80 text-primary rounded-full text-sm font-medium mb-4 mt-4">
-              Product Catalogue
-            </span>
-            <h1 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
-              Complete Building Materials Solutions
-            </h1>
-            <p className="text-lg text-secondary/80 mb-8">
-              Browse our comprehensive range of VAMICOL premium adhesives, laminates,
-              edge banding, and construction supplies from world-renowned brands.
-            </p>
+          <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-8">
+            <div className="max-w-3xl">
+              <span className="inline-block px-4 py-2 bg-white/80 text-primary rounded-full text-sm font-medium mb-4 mt-4">
+                Product Catalogue
+              </span>
+              <h1 className="text-4xl md:text-5xl font-bold text-secondary mb-6">
+                Complete Building Materials Solutions
+              </h1>
+              <p className="text-lg text-secondary/80 mb-8">
+                Browse our comprehensive range of VAMICOL premium adhesives, laminates,
+                edge banding, and construction supplies from world-renowned brands.
+              </p>
+            </div>
+            <div className="flex-shrink-0">
+              <a href="/Export Detailer_final_05042022_CTC.pdf" download="Export Detailer_final_05042022_CTC.pdf" target="_blank" rel="noopener noreferrer">
+                <Button size="lg" className="gap-2 bg-secondary hover:bg-secondary/90 text-white shadow-lg transform hover:-translate-y-1 transition-all duration-300">
+                  <Download className="w-5 h-5" />
+                  Download Catalogue
+                </Button>
+              </a>
+            </div>
           </div>
         </div>
       </section>

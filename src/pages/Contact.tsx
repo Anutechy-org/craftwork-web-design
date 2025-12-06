@@ -49,7 +49,7 @@ ${formData.message}
     {
       icon: MapPin,
       title: "Visit Us",
-      details: ["Dubai, UAE"],
+      details: ["Craft Work Trading LLC, Al Jerf Industrial 2 - Ajman"],
     },
     {
       icon: Phone,
@@ -64,7 +64,7 @@ ${formData.message}
     {
       icon: Clock,
       title: "Business Hours",
-      details: ["Saturday - Thursday", "8:00 AM - 6:00 PM"],
+      details: ["Monday - Friday", "9:00 AM - 6:00 PM"],
     },
   ];
 

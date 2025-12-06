@@ -67,7 +67,7 @@ const GroupCompanies = () => {
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="text-2xl md:text-3xl font-bold text-secondary mb-4">
-              Our Sister Companies
+              Our Group Entities
             </h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Each company in our group operates independently while sharing the same commitment

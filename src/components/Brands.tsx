@@ -107,12 +107,10 @@ const Brands = () => {
                   <img src={vamicolLogo} alt="VAMICOL" className="w-full h-full object-contain" />
                 </div>
                 <p className="text-secondary-foreground/80 max-w-lg mb-4">
-                  Industry-leading premium adhesives and specialty coatings.
-                  From All Rounder to Aquabond, VAMICOL delivers exceptional bonding
-                  solutions for every application.
+                  Industry-leading premium adhesives and specialty coating, From D1 to D4 adhesives with Weather, Water & Fire resistant grade  for all your Joinery, Fitout & construction solutions.
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  {["All Rounder", "Aquabond", "Lamino", "Supremo", "Watershield"].map((product) => (
+                  {["All Rounder", "D3 Supremo", "Fast X", "D4PUR", "SQ100", "Jubi Spray"].map((product) => (
                     <span
                       key={product}
                       className="px-3 py-1 bg-primary/20 rounded-full text-sm text-secondary-foreground"
