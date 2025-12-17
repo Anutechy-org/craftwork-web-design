@@ -29,7 +29,7 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <img src={logo} alt="Craftwork Trading" className="h-10 w-auto mb-6 brightness-0 invert" />
             <p className="text-secondary-foreground/70 text-sm mb-6 leading-relaxed">
-              Your trusted partner for premium building materials, VAMICOL adhesives, 
+              Your trusted partner for premium building materials, VAMICOL adhesives,
               and construction supplies in the UAE.
             </p>
             <div className="flex gap-4">
@@ -92,8 +92,8 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-3">
                 <Phone className="w-5 h-5 text-primary flex-shrink-0" />
-                <a href="tel:+97165248148" className="text-secondary-foreground/70 hover:text-primary transition-colors text-sm">
-                  +971 6 524 8148
+                <a href="tel:+971586510418" className="text-secondary-foreground/70 hover:text-primary transition-colors text-sm">
+                  +971 58 651 0418
                 </a>
               </li>
               <li className="flex items-center gap-3">

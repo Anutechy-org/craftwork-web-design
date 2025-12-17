@@ -54,7 +54,7 @@ ${formData.message}
     {
       icon: Phone,
       title: "Call Us",
-      details: ["+971 6 524 8148"],
+      details: ["+971 58 651 0418"],
     },
     {
       icon: Mail,
@@ -253,10 +253,10 @@ ${formData.message}
             Our team is available during business hours to answer your calls.
             For urgent inquiries, reach us directly at our hotline.
           </p>
-          <a href="tel:+97165248148">
+          <a href="tel:+971586510418">
             <Button size="lg" variant="secondary" className="gap-2">
               <Phone className="w-5 h-5" />
-              Call Now: +971 6 524 8148
+              Call Now: +971 58 651 0418
             </Button>
           </a>
         </div>

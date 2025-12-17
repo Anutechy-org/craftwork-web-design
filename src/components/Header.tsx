@@ -31,7 +31,7 @@ const Header = () => {
           <div className="hidden md:flex items-center gap-6">
             <a href="tel:+97165248148" className="flex items-center gap-2 hover:text-primary transition-colors">
               <Phone className="w-4 h-4" />
-              +971 6 524 8148
+              +971 58 651 0418
             </a>
             <a href="mailto:info@craftworktrading.com" className="flex items-center gap-2 hover:text-primary transition-colors">
               <Mail className="w-4 h-4" />
